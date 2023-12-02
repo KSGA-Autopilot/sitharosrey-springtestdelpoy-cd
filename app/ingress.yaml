@@ -1,0 +1,21 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sitharosrey-springtestdelpoy-ingress
+  namespace: sitharosrey
+spec:
+  tls:
+    - hosts:
+        - me.auto-pilot.dev
+      secretName: tls-cert
+  rules:
+    - host: me.auto-pilot.dev
+      http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: sitharosrey-springtestdelpoy-svc
+                port:
+                  number: 8080
