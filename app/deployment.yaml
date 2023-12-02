@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: sitharosrey-springtestdelpoy
-          image: kshrdautopilot/sitharosrey-springtestdelpoy
+          image: kshrdautopilot/sitharosrey-springtestdelpoy:2023-12-02-05-20-55
           ports:
             - containerPort: 8080
