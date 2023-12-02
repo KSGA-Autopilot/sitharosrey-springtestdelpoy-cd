@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sitharosrey-springtestdelpoy-deployment
+  labels:
+    app: sitharosrey-springtestdelpoy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sitharosrey-springtestdelpoy
+  template:
+    metadata:
+      labels:
+        app: sitharosrey-springtestdelpoy
+    spec:
+      containers:
+        - name: sitharosrey-springtestdelpoy
+          image: kshrdautopilot/sitharosrey-springtestdelpoy
+          ports:
+            - containerPort: 8080
